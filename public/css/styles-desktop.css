@@ -1,0 +1,121 @@
+/******* Change Box Model ***************/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+*{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+}
+
+html {
+  background-image: url('/images/site/small_check.jpg');
+  height: 100vh; /* Mantém o fundo ocupando toda a tela */
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* Não centraliza todo o conteúdo */
+  align-items: flex-start; /* Garante que o conteúdo comece do topo */
+  
+}
+
+body{
+  background-color: white;
+  margin: 0;
+  min-height: 90vh; /* Menor que 100vh para aparecer o fundo */
+  max-width: 90%; /* Evita ocupar toda a largura */
+  padding: 10px;
+  border: 5px solid rgba(0, 183, 255, 0.736);
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.621); 
+
+}
+
+header {
+  background-color: white;
+
+  padding: 10px 40px;
+  text-align: center;
+  font-size: 24px;
+ display: flex;
+ justify-content: space-around;
+  
+}
+header a{
+  text-decoration: none;
+  color: black;
+}
+  
+nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+ 
+}
+nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.hero-img{
+  background-image: url("/images/vehicles/delorean.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.kart{
+  background-color: rgba(184, 206, 226, 0.714);
+  justify-content: flex-start;
+  margin: 20px;
+  padding: 15px;
+  
+  
+}
+
+.kart button{
+  background-color: aqua;
+  padding: 10px;
+}
+.card-div{
+  display: flex;
+    align-items: flex-start;
+   flex-direction: column;
+}
+
+.upgrades-reviews{
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+.upgrades_items{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  
+}
+
+.upgrades_items div {
+  display: flex;
+  flex-direction: column;
+ padding: 15px;
+
+ 
+}
+
+.upgrades_items div img{
+  height: 70%;
+ 
+}
+
+@media screen and (max-width: 767px) {
+  .upgrades-reviews{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
