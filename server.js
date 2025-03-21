@@ -42,10 +42,6 @@ app.use(async (req, res, next) => {
   next({status: 404, message: 'Sorry, we appear to have lost that page.'})
 })
 
-// Importing errorRoutes from routes folder
-const errorRoutes = require('./routes/errorRoutes');  // Correct path
-
-app.use('/', errorRoutes);
 
 
 
