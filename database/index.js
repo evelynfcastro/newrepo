@@ -6,7 +6,7 @@ require("dotenv").config()
  * But will cause problems in production environment
  * If - else will make determination which to use
  * *************** */
-let pool
+let pool;
 if (process.env.NODE_ENV == "development") {
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -16,7 +16,16 @@ if (process.env.NODE_ENV == "development") {
 });
 
 // Added for troubleshooting queries
-// during development
+// during developmen
+}
+
+ else {
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+  });
+  module.exports = pool
+}
+
 module.exports = {
   async query(text, params) {
     try {
@@ -29,11 +38,3 @@ module.exports = {
     }
   },
 };
-}
-
- else {
-  pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-  });
-  module.exports = pool
-}
