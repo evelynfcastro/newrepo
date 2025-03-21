@@ -66,6 +66,24 @@ Util.buildClassificationGrid = async function(data){
  * Wrap other function in this for 
  * General Error Handling
  **************************************** */
+
+
+Util.wrapVehicleHTML = (vehicle) => {
+  return `
+    <div class="vehicle-detail">
+    
+    <div class="img-box">
+      <img src="${vehicle.inv_image}" alt="${vehicle.inv_make} ${vehicle.inv_model}" class="full-image">
+    </div>
+     <div class="inf-box">
+      <h2>Price: $${vehicle.inv_price.toLocaleString("en-US")}</h2>
+      <p><strong>Year:</strong> ${vehicle.inv_year}</p>
+      <p><strong>Mileage:</strong> ${vehicle.inv_miles.toLocaleString("en-US")} miles</p>
+      <p><strong>Description:</strong> ${vehicle.inv_description}</p>
+      </div>
+    </div>
+  `;
+};
 Util.handleErrors = fn => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next)
 
 

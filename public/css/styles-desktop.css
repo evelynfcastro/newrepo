@@ -51,7 +51,7 @@ header a{
 nav {
   background-color: black;
   color: white;
-  display: flex;
+  
   justify-content: space-around;
   padding: 20px;
  
@@ -59,6 +59,17 @@ nav {
 nav a{
   text-decoration: none;
   color: white;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+justify-content: space-around
+}
+
+.inf-box{
+  background-color: rgb(160, 201, 238);
 }
 
 .hero-img{
@@ -113,9 +124,28 @@ nav a{
  
 }
 
+.vehicle-detail{
+  display: flex;
+  flex-direction: row;
+}
+
+.vehicle-detail div{
+  padding: 20px;
+}
+
 @media screen and (max-width: 767px) {
   .upgrades-reviews{
     display: flex;
     flex-direction: column-reverse;
+  }
+  .vehicle-detail{
+    display: flex;
+    flex-direction: column;
+  }
+nav ul{
+  flex-direction: column;
+}
+  .img-box img{
+width: 70%;
   }
 }
