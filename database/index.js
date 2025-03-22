@@ -17,14 +17,13 @@ if (process.env.NODE_ENV == "development") {
 
 // Added for troubleshooting queries
 // during developmen
-}
-
- else {
+}else {
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
   });
-  module.exports = pool
+ 
 }
+module.exports = pool ;
 
 module.exports = {
   async query(text, params) {
