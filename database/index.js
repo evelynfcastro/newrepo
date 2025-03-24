@@ -26,7 +26,7 @@ if (process.env.NODE_ENV == "development") {
 module.exports = pool ;
 
 module.exports = {
-  async query(text, params) {
+  async query (text, params) {
     try {
       const res = await pool.query(text, params)
       console.log("executed query", { text })
@@ -36,4 +36,6 @@ module.exports = {
       throw error
     }
   },
-};
+  };
+
+ 
